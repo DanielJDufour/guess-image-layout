@@ -1,8 +1,5 @@
 # guess-image-layout
-Guess the Layout of Image Pixels.  Returns layout in xdim layout syntax.
-
-# xdim layout syntax
-To read more about the xdim layout syntax, please consult: https://github.com/danieljdufour/xdim
+Guess the Layout of Image Pixels.  Returns layout in [xdim layout syntax](https://github.com/danieljdufour/xdim).
 
 # install
 ```bash
