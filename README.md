@@ -17,12 +17,12 @@ const rgba = [123, 234, 42, 255, 124, 42, 42, 255, ...];
 const { layout } = guessImageLayout({ data: rgba });
 // layout is "[row,column,band]"
 
-const  = [
+const bands = [
   [123, 124, ...], // red band
   [234, 42, ...], // green band
   [42, 42, ...], // blue band
   [255, 255, ...] // alpha band
 ];
-const { layout } = guessImageLayout({ data: 3d_data });
+const { layout } = guessImageLayout({ data: bands });
 // layout is "[band][row,column]"
 ```
