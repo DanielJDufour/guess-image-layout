@@ -11,8 +11,8 @@ npm install guess-image-layout
 import guessImageLayout from "guess-image-layout";
 
 const rgba = [123, 234, 42, 255, 124, 42, 42, 255, ...];
-const { layout } = guessImageLayout({ data: rgba });
-// layout is "[row,column,band]"
+guessImageLayout({ data: rgba, bands: 4, height: 768  });
+// { layout: "[row,column,band]", bands: 4, height: 768, width: 1024 }
 
 const bands = [
   [123, 124, ...], // red band
@@ -20,6 +20,6 @@ const bands = [
   [42, 42, ...], // blue band
   [255, 255, ...] // alpha band
 ];
-const { layout } = guessImageLayout({ data: bands });
-// layout is "[band][row,column]"
+guessImageLayout({ data: bands });
+// { layout: "[band][row,column]", bands: 4, height: undefined, width: undefined }
 ```
