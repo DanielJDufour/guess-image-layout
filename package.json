@@ -29,11 +29,11 @@
     "url": "https://github.com/DanielJDufour/guess-image-layout/issues"
   },
   "homepage": "https://github.com/DanielJDufour/guess-image-layout#readme",
-  "dependencies": {
-    "get-depth": "^0.0.1"
-  },
   "devDependencies": {
     "find-and-read": "^1.0.0",
     "flug": "^2.1.0"
+  },
+  "dependencies": {
+    "get-depth": "^0.0.3"
   }
 }
