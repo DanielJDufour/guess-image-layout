@@ -1,6 +1,6 @@
 {
   "name": "guess-image-layout",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Guess the Layout of Image Pixels. Returns layout in xdim layout syntax.",
   "main": "guess-image-layout.js",
   "files": [
