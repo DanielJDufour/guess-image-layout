@@ -1,8 +1,8 @@
 const getDepth = require("get-depth");
 
-module.exports = function guessImageLayout({ bands, data, height, width }) {
+function guessImageLayout({ bands, data, height, layout, width }) {
   const depth = getDepth(data);
-  if (depth === 1) {
+  if (layout === "[row,column,band]" || depth === 1) {
     // guess interleaved rgba ImageData.data
     return {
       layout: "[row,column,band]",
@@ -54,4 +54,24 @@ module.exports = function guessImageLayout({ bands, data, height, width }) {
       }
     }
   }
-};
+}
+
+if (typeof define === "function" && define.amd) {
+  define(function () {
+    return guessImageLayout;
+  });
+}
+
+if (typeof module === "object") {
+  module.exports = guessImageLayout;
+  module.exports.default = guessImageLayout;
+  module.exports.guessImageLayout = guessImageLayout;
+}
+
+if (typeof window === "object") {
+  window.guessImageLayout = guessImageLayout;
+}
+
+if (typeof self === "object") {
+  self.guessImageLayout = guessImageLayout;
+}
